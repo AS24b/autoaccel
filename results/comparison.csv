@@ -1,0 +1,5 @@
+width,conventional_cells,karatsuba_cells,cell_count_reduction_percent,lower_cell_count_architecture
+8,404,516,-27.72,conventional
+16,1903,1733,8.93,karatsuba
+32,8306,6064,26.99,karatsuba
+64,34837,21821,37.36,karatsuba
