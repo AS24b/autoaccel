@@ -10,34 +10,34 @@ class TestArchitectureSelector(unittest.TestCase):
         row = {
             "width": 8,
             "conventional_cells": 404,
-            "karatsuba_cells": 516,
+            "karatsuba_cells": 492,
         }
         winner, reduction = select_architecture(row)
 
         self.assertEqual(winner, "Conventional")
-        self.assertAlmostEqual(reduction, 21.7054, places=3)
+        self.assertAlmostEqual(reduction, 17.8862, places=3)
 
     def test_karatsuba_wins_at_16_bits(self):
         row = {
             "width": 16,
             "conventional_cells": 1903,
-            "karatsuba_cells": 1733,
+            "karatsuba_cells": 1685,
         }
         winner, reduction = select_architecture(row)
 
         self.assertEqual(winner, "Karatsuba")
-        self.assertAlmostEqual(reduction, 8.9333, places=3)
+        self.assertAlmostEqual(reduction, 11.4556, places=3)
 
     def test_karatsuba_wins_at_64_bits(self):
         row = {
             "width": 64,
             "conventional_cells": 34837,
-            "karatsuba_cells": 21821,
+            "karatsuba_cells": 21581,
         }
         winner, reduction = select_architecture(row)
 
         self.assertEqual(winner, "Karatsuba")
-        self.assertGreater(reduction, 37.0)
+        self.assertGreater(reduction, 38.0)
 
     def test_equal_counts_produce_tie(self):
         row = {

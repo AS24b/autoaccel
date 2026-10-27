@@ -4,12 +4,12 @@
  |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
  |  Distributed under an ISC-like license, type "license" to see terms        |
  \----------------------------------------------------------------------------/
- Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)
+ Yosys 0.70+190 (git sha1 485b63564, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)
 
--- Running command `read_verilog -sv C:\Users\anshi\OneDrive\Desktop\ccode\autoaccel\rtl\multiplier\PARAMETERIZED_MUTLIPLIER.sv; hierarchy -top karatsuba_multiplier -chparam N 8; proc; opt; techmap; opt; stat' --
+-- Running command `read_verilog -sv C:\Users\siddh\OneDrive\Documents\autoaccel\rtl\multiplier\PARAMETERIZED_MULTIPLIER.sv; hierarchy -top karatsuba_multiplier -chparam N 8; proc; opt; techmap; opt; stat' --
 
-1. Executing Verilog-2005 frontend: C:\Users\anshi\OneDrive\Desktop\ccode\autoaccel\rtl\multiplier\PARAMETERIZED_MUTLIPLIER.sv
-Parsing SystemVerilog input from `C:\Users\anshi\OneDrive\Desktop\ccode\autoaccel\rtl\multiplier\PARAMETERIZED_MUTLIPLIER.sv' to AST representation.
+1. Executing Verilog-2005 frontend: C:\Users\siddh\OneDrive\Documents\autoaccel\rtl\multiplier\PARAMETERIZED_MULTIPLIER.sv
+Parsing SystemVerilog input from `C:\Users\siddh\OneDrive\Documents\autoaccel\rtl\multiplier\PARAMETERIZED_MULTIPLIER.sv' to AST representation.
 Generating RTLIL representation for module `\karatsuba_multiplier'.
 Successfully finished Verilog frontend.
 
@@ -31,8 +31,8 @@ Removed 1 unused modules.
 4. Executing PROC pass (convert processes to netlists).
 
 4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Found and cleaned up 1 empty switch in `\karatsuba_multiplier.$proc$C:\Users\anshi\OneDrive\Desktop\ccode\autoaccel\rtl\multiplier\PARAMETERIZED_MUTLIPLIER.sv:10$24'.
-Removing empty process `karatsuba_multiplier.$proc$C:\Users\anshi\OneDrive\Desktop\ccode\autoaccel\rtl\multiplier\PARAMETERIZED_MUTLIPLIER.sv:10$24'.
+Found and cleaned up 1 empty switch in `\karatsuba_multiplier.$C:\Users\siddh\OneDrive\Documents\autoaccel\rtl\multiplier\PARAMETERIZED_MULTIPLIER.sv:10$proc$24'.
+Removing empty process `karatsuba_multiplier.$C:\Users\siddh\OneDrive\Documents\autoaccel\rtl\multiplier\PARAMETERIZED_MULTIPLIER.sv:10$proc$24'.
 Cleaned up 1 empty switch.
 
 4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
@@ -131,8 +131,8 @@ Optimizing module karatsuba_multiplier.
 
 6. Executing TECHMAP pass (map to technology primitives).
 
-6.1. Executing Verilog-2005 frontend: C:\Users\anshi\Downloads\oss-cad-suite-windows-x64-20261014\oss-cad-suite\bin\../share/yosys/techmap.v
-Parsing Verilog input from `C:\Users\anshi\Downloads\oss-cad-suite-windows-x64-20261014\oss-cad-suite\bin\../share/yosys/techmap.v' to AST representation.
+6.1. Executing Verilog-2005 frontend: C:\Users\siddh\Downloads\oss-cad-suite-windows-x64-20261022\oss-cad-suite\bin\../share/yosys/techmap.v
+Parsing Verilog input from `C:\Users\siddh\Downloads\oss-cad-suite-windows-x64-20261022\oss-cad-suite\bin\../share/yosys/techmap.v' to AST representation.
 Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
 Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
 Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
@@ -178,17 +178,17 @@ Using template $paramod$b85fbb3374a1d9ba7ee4f4d6323c30f939df3ada\_90_alu for cel
   add \A_sum * \B_sum (5x5 bits, unsigned)
 Using template $paramod$0bf21d6ba6357507623b189abbc1d6f284d75c81\_90_alu for cells of type $alu.
 Using template $paramod$12350b8c8422a70d10b7db4eaae1202a7148b784\_90_alu for cells of type $alu.
-Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001010 for cells of type $fa.
-Using template $paramod$484d51534650924b7ed4c69e46eed3a56904771f\_90_alu for cells of type $alu.
 Using extmapper simplemap for cells of type $and.
 Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001000 for cells of type $fa.
 Using template $paramod$a1bc51c02ce12ac21eb18988e83292af48ed7d72\_90_alu for cells of type $alu.
 Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $not.
 Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000101 for cells of type $fa.
 Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
 Using extmapper simplemap for cells of type $pos.
 Using extmapper simplemap for cells of type $mux.
-Using extmapper simplemap for cells of type $not.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001010 for cells of type $fa.
+Using template $paramod$484d51534650924b7ed4c69e46eed3a56904771f\_90_alu for cells of type $alu.
 Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001010 for cells of type $lcu.
 Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010010 for cells of type $fa.
 Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010010 for cells of type $lcu.
@@ -201,16 +201,16 @@ No more expansions possible.
 
 7.1. Executing OPT_EXPR pass (perform const folding).
 Optimizing module karatsuba_multiplier.
-<suppressed ~892 debug messages>
+<suppressed ~941 debug messages>
 
 7.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\karatsuba_multiplier'.
-Computing hashes of 614 cells of `\karatsuba_multiplier'.
+Computing hashes of 565 cells of `\karatsuba_multiplier'.
 Finding duplicate cells in `\karatsuba_multiplier'.
-Computing hashes of 606 cells of `\karatsuba_multiplier'.
+Computing hashes of 556 cells of `\karatsuba_multiplier'.
 Finding duplicate cells in `\karatsuba_multiplier'.
-<suppressed ~24 debug messages>
-Removed a total of 8 cells.
+<suppressed ~27 debug messages>
+Removed a total of 9 cells.
 
 7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
 Running muxtree optimizer on module \karatsuba_multiplier..
@@ -224,7 +224,7 @@ Performed a total of 0 changes.
 
 7.5. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\karatsuba_multiplier'.
-Computing hashes of 606 cells of `\karatsuba_multiplier'.
+Computing hashes of 556 cells of `\karatsuba_multiplier'.
 Finding duplicate cells in `\karatsuba_multiplier'.
 Removed a total of 0 cells.
 
@@ -232,8 +232,8 @@ Removed a total of 0 cells.
 
 7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \karatsuba_multiplier..
-Removed 90 unused cells and 584 unused wires.
-<suppressed ~91 debug messages>
+Removed 64 unused cells and 594 unused wires.
+<suppressed ~65 debug messages>
 
 7.8. Executing OPT_EXPR pass (perform const folding).
 Optimizing module karatsuba_multiplier.
@@ -252,7 +252,7 @@ Performed a total of 0 changes.
 
 7.12. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\karatsuba_multiplier'.
-Computing hashes of 516 cells of `\karatsuba_multiplier'.
+Computing hashes of 492 cells of `\karatsuba_multiplier'.
 Finding duplicate cells in `\karatsuba_multiplier'.
 Removed a total of 0 cells.
 
@@ -272,18 +272,18 @@ Optimizing module karatsuba_multiplier.
 
         +----------Local Count, excluding submodules.
         | 
-      194 wires
-      944 wire bits
+      184 wires
+      934 wire bits
        13 public wires
        94 public wire bits
         3 ports
        32 port bits
-      516 cells
-      253   $_AND_
+      492 cells
+      240   $_AND_
        22   $_NOT_
-       77   $_OR_
-      164   $_XOR_
+       79   $_OR_
+      151   $_XOR_
 
-End of script. Logfile hash: abf72ac164
-Yosys 0.70+16 (git sha1 3bb533450, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)
+End of script. Logfile hash: 97c83d1972
+Yosys 0.70+190 (git sha1 485b63564, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)
 Time spent: 4% 15x opt_expr (0 sec), 4% 10x proc_clean (0 sec), ...

@@ -67,10 +67,11 @@ def main():
         "",
         "## Verification status",
         "",
-        "- RTL simulations: previously reported as passing at tested configurations.",
-        "- Formal equivalence: 8-bit proof passed.",
-        "- 16-bit formal equivalence: unresolved; direct SAT proof did not complete.",
-        "- Selector unit tests: 4 tests passed in the latest reported run.",
+        "- Conventional simulation: 108 vectors each passed at N=8, N=16, and N=32 in the recorded audit run.",
+        "- Karatsuba simulation: 1,045 vectors each passed at N=8, N=16, and N=32 in the recorded audit run.",
+        "- Formal equivalence: N=8 passed with SymbiYosys and Bitwuzla.",
+        "- N=16 formal equivalence: unresolved; the full 32-bit output proof timed out. Bit 0 passed, but that does not prove the full output. No confirmed counterexample was established by the timeout runs.",
+        "- Selector unit tests: 4 tests passed in the recorded audit run.",
         "",
         "## Interpretation and limitations",
         "",
@@ -82,6 +83,10 @@ def main():
         "RTL and synthesis configuration. Further verification and "
         "technology-specific implementation are needed before making broader "
         "hardware performance claims.",
+        "",
+        "The current repository does not include the openly licensed Jupyter "
+        "notebook or open-source license required by the IEEE SSCS Code-a-Chip "
+        "submission instructions.",
         "",
     ])
 

@@ -13,7 +13,7 @@ ARCHITECTURES = {
         "top": "conventional_multiplier",
     },
     "karatsuba": {
-        "source": ROOT / "rtl" / "multiplier" / "PARAMETERIZED_MUTLIPLIER.sv",
+        "source": ROOT / "rtl" / "multiplier" / "PARAMETERIZED_MULTIPLIER.sv",
         "top": "karatsuba_multiplier",
     },
 }
