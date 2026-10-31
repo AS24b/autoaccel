@@ -188,5 +188,5 @@ Interpretation and caveats:
 
 ## Project team
 
-SIDDHESH SINGH
+SIDDHESH SINGH and
 ANSHIKA SINGH
