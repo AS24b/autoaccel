@@ -188,4 +188,5 @@ Interpretation and caveats:
 
 ## Project team
 
-Two-person undergraduate ECE/VLSI team.
+SIDDHESH SINGH
+ANSHIKA SINGH
